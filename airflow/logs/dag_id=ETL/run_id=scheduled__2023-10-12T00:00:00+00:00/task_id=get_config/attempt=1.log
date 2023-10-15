@@ -1,0 +1,5 @@
+[2023-10-12T14:19:26.934+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-12T14:19:27.845+0000] {taskinstance.py:1149} INFO - Dependencies not met for <TaskInstance: ETL.get_config scheduled__2023-10-12T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2023-10-12T14:19:27.846+0000] {local_task_job_runner.py:154} INFO - Task is not able to be run

@@ -1,0 +1,399 @@
+[2023-09-29T09:50:53.500+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T09:50:53.504+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T09:50:53.508+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T09:50:53.508+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T09:50:53.512+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T09:50:53.516+0000] {standard_task_runner.py:57} INFO - Started process 170 to run task
+[2023-09-29T09:50:53.518+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpeevppar_']
+[2023-09-29T09:50:53.519+0000] {standard_task_runner.py:85} INFO - Job 14: Subtask crawl_data
+[2023-09-29T09:50:53.525+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T09:50:53.540+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T09:50:53.544+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T09:50:53.572+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T10:23:30.272+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-29T10:23:30.277+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T095053, end_date=20230929T102330
+[2023-09-29T10:23:30.336+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-29T10:23:30.350+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:23:16.978+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:23:16.995+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:23:17.009+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:23:17.010+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:23:17.018+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:23:17.024+0000] {standard_task_runner.py:57} INFO - Started process 179 to run task
+[2023-09-29T12:23:17.028+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpjbzrg65y']
+[2023-09-29T12:23:17.029+0000] {standard_task_runner.py:85} INFO - Job 17: Subtask crawl_data
+[2023-09-29T12:23:17.045+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:23:17.081+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:23:17.090+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:23:17.124+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:23:17.125+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 18, in extract_data
+    data = get_today_dataframe(booking_links[0])
+KeyError: 0
+[2023-09-29T12:23:17.128+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T122316, end_date=20230929T122317
+[2023-09-29T12:23:17.133+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 17 for task crawl_data (0; 179)
+[2023-09-29T12:23:17.160+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:23:17.173+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:24:52.045+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:24:52.049+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:24:52.059+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:24:52.060+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:24:52.065+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:24:52.069+0000] {standard_task_runner.py:57} INFO - Started process 185 to run task
+[2023-09-29T12:24:52.072+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp6g2i7bhe']
+[2023-09-29T12:24:52.072+0000] {standard_task_runner.py:85} INFO - Job 19: Subtask crawl_data
+[2023-09-29T12:24:52.079+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:24:52.096+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:24:52.100+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:24:52.179+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:24:52.180+0000] {logging_mixin.py:151} INFO - {'Hồ Chí Minh': 'https://www.booking.com/searchresults.vi.html?ss=TP.+H%C3%B4%CC%80+Chi%CC%81+Minh%2C+Vi%C3%AA%CC%A3t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAL1lMaoBsACAdICJGM1MWM1ODQyLWYzMmMtNGExMi1iMWFmLWM4YzliMDE0MzJlMNgCBeACAQ&sid=a3cf4761bc87283185953cebac7c42a2&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3730078&dest_type=city&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Hà Nội': 'https://www.booking.com/searchresults.vi.html?ss=Ha%CC%80+N%C3%B4%CC%A3i%2C+Vi%C3%AA%CC%A3t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALDmMaoBsACAdICJDk4YmE4ZjY1LTY2YWMtNDM1YS05NGEzLWYxMTE4MDA5MmMzNNgCBeACAQ&sid=3fad67540608476afb06c23007af9769&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3714993&dest_type=city&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Kiên Giang': 'https://www.booking.com/searchresults.vi.html?ss=Ki%C3%AAn+Giang%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKGmcaoBsACAdICJGQ5MDFiYTI1LTBiMDQtNDE4My1iMzUwLWI1MmY3MDA1N2ViMtgCBeACAQ&sid=09a51afba63e2d8ac1241ffd81ab8919&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=5405&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=c6f75f83edcf016d&ac_meta=GhBjNmY3NWY4M2VkY2YwMTZkIAAoATICdmk6C0tpw6puIEdpYW5nQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'An Giang': 'https://www.booking.com/searchresults.vi.html?ss=An+Giang%2C+Vietnam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALMmcaoBsACAdICJDY5MjcxZTdhLTMwNWYtNDM3OC1iMzg5LTY2MmFmNzdjNWQ0Y9gCBeACAQ&sid=ab77dcbfb006fe3f7fdfe74decca51b8&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6891&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=a60e5fa661ca0190&ac_meta=GhBhNjBlNWZhNjYxY2EwMTkwIAAoATICZW46CEFuIEdpYW5nQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Bình Thuận': 'https://www.booking.com/searchresults.vi.html?ss=B%C3%ACnh+Thu%E1%BA%ADn%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKNmsaoBsACAdICJDBjOTVkNDIyLTYyODMtNDk4Mi1iMTc1LTlhOGU1NjdlY2UxY9gCBeACAQ&sid=87a6742fbac4e5848ef6524ebe6a5eb0&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=5391&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=b7345fc63e51009f&ac_meta=GhBiNzM0NWZjNjNlNTEwMDlmIAAoATICdmk6DULDrG5oIFRodeG6rW5AAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Khánh Hòa': 'https://www.booking.com/searchresults.vi.html?ss=Kh%C3%A1nh+H%C3%B2a%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALSmsaoBsACAdICJDEzNGM1YzQ5LTMyODctNGMzYi1hYTE1LTU2ZjA4YmU2YTZlN9gCBeACAQ&sid=714f03f9d5e7d659498d52c3efeb1a55&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=5425&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=906e5fe9d6370663&ac_meta=GhA5MDZlNWZlOWQ2MzcwNjYzIAAoATICdmk6C0tow6FuaCBIw7JhQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Đà Nẵng': 'https://www.booking.com/searchresults.vi.html?ss=Th%C3%A0nh+ph%E1%BB%91+%C4%90%C3%A0+N%E1%BA%B5ng%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALppcaoBsACAdICJGZjMzM5YTI4LTBjZTAtNGE1MS04ZmQxLTQxYTk4MDg3MGUzYtgCBeACAQ&sid=94021cd962e0a96f854086cc6be18575&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6232&dest_type=region&ac_position=1&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=7c9c62b4b1aa0237&ac_meta=GhA3YzljNjJiNGIxYWEwMjM3IAEoATICdmk6C8SQw6AgTuG6tW5nQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Hải Phòng': 'https://www.booking.com/searchresults.vi.html?ss=H%E1%BA%A3i+Ph%C3%B2ng%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKnpsaoBsACAdICJGNiMzJhYjg1LTVkZGItNGNlMC1hNTM5LTViYzVhZjA2YzYzMNgCBeACAQ&sid=e89cd9f5cf55e144ef4bff020db2eb35&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6266&dest_type=region&ac_position=1&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=68ab62d3f6220088&ac_meta=GhA2OGFiNjJkM2Y2MjIwMDg4IAEoATICdmk6DEjhuqNpIFBow7JuZ0AASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Quảng Ninh': 'https://www.booking.com/searchresults.vi.html?ss=Qu%E1%BA%A3ng+Ninh%2C+Qu%E1%BA%A3ng+Ninh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALhpsaoBsACAdICJDFjNGNhMzhhLWFiYjEtNGU3OS1iOGI2LTk5OWM5NmQzZmRiY9gCBeACAQ&sid=305242b05757b522990c5bf809238988&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3727317&dest_type=city&ac_position=1&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=7c9c62f1c98d012f&ac_meta=GhA3YzljNjJmMWM5OGQwMTJmIAEoATICdmk6DFF14bqjbmcgTmluaEAASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Lâm Đồng': 'https://www.booking.com/searchresults.vi.html?ss=L%C3%A2m+%C4%90%E1%BB%93ng%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAK2qMaoBsACAdICJDcxOTRkNWNmLTk4NTctNDU3Ny04YmI3LTMxZmJjOTJhOWFhNtgCBeACAQ&sid=aa3392079283a43e7fc94bc100050e67&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6269&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=8174635b800e0029&ac_meta=GhA4MTc0NjM1YjgwMGUwMDI5IAAoATICdmk6DEzDom0gxJDhu5NuZ0AASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Lào Cai': 'https://www.booking.com/searchresults.vi.html?ss=L%C3%A0o+Cai%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKZq8aoBsACAdICJDAzYmNjMzNlLTA2YjMtNGUyNy1iMmMxLTY3YTAzOTRhNzE4ONgCBeACAQ&sid=0e97ea67898fd629a76ded035e807664&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6265&dest_type=region&ac_position=2&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=4d2e640c75a9008a&ac_meta=GhA0ZDJlNjQwYzc1YTkwMDhhIAIoATICdmk6CEzDoG8gQ2FpQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Thái Bình': 'https://www.booking.com/searchresults.vi.html?ss=Th%C3%A1i+B%C3%ACnh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALCq8aoBsACAdICJDJmZDU3YzYxLWFiMzEtNDhlZS04Y2UwLTY1ZDQ1YmU5MjRhOdgCBeACAQ&sid=81f056d0bd759f06f84910f3e86395c6&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6866&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=2c686421e2a1006a&ac_meta=GhAyYzY4NjQyMWUyYTEwMDZhIAAoATICdmk6C1Row6FpIELDrG5oQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Cần Thơ': 'https://www.booking.com/searchresults.vi.html?ss=C%E1%BA%A7n+Th%C6%A1%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALXrcaoBsACAdICJGU5ZmJkMTdjLWFlNTctNGM3OC1hMjI1LWZiMmMzMDM0YThjM9gCBeACAQ&sid=10ef59ac4ef8cf2c8b0aa90aa40f83f7&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6230&dest_type=region&ac_position=2&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=6dc964ac81800328&ac_meta=GhA2ZGM5NjRhYzgxODAwMzI4IAIoATICdmk6CkPhuqduIFRoxqFAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Quảng Bình': 'https://www.booking.com/searchresults.vi.html?ss=Qu%E1%BA%A3ng+B%C3%ACnh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAL7rcaoBsACAdICJDdjMmIxYTZlLWUwM2UtNDBmNi1hNzU1LTRlMzA3NTM1OTA1MNgCBeACAQ&sid=8c5757c746997dbe16e3bfd227eb8e12&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6927&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=8b1e64bd75e80354&ac_meta=GhA4YjFlNjRiZDc1ZTgwMzU0IAAoATICdmk6DVF14bqjbmcgQsOsbmhAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Huế': 'https://www.booking.com/searchresults.vi.html?ss=Hu%E1%BA%BF%2C+Th%E1%BB%ABa+Thi%C3%AAn+-+Hu%E1%BA%BF%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKhrsaoBsACAdICJDUzNzI4NGRjLWUyNTQtNGZlMi04ZDNmLWNhNjllZDUxNmQ1MNgCBeACAQ&sid=4090bea462b4e98000bf70fd862083ed&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3715887&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=63b464d071050146&ac_meta=GhA2M2I0NjRkMDcxMDUwMTQ2IAAoATICdmk6BUh14bq%2FQABKAFAA&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Cao Bằng': 'https://www.booking.com/searchresults.vi.html?ss=Cao+Bang%2C+Vietnam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALorsaoBsACAdICJDkwYjE2ODZkLTFhMjgtNGQwZC1hZmM0LTg4OGI0ODQ1NDA1MNgCBeACAQ&sid=d60ac00b941052ab31195f448c574785&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6907&dest_type=region&ac_position=1&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=2b9b64f40cf101f5&ac_meta=GhAyYjliNjRmNDBjZjEwMWY1IAEoATICZW46E0NhbyBC4bqxbmcsIFZpZXRuYW1AAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Đắk Lắk': 'https://www.booking.com/searchresults.vi.html?ss=%C4%90%E1%BA%AFc+L%E1%BA%AFc%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALcr8aoBsACAdICJDAxY2E0OTE2LWY1YzEtNDYwNy1hYmFkLWM4NzFhYzljZDI1MdgCBeACAQ&sid=4032dd64e9bbfc4448aef5b321fe894d&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6880&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=3&search_selected=true&search_pageview_id=4ee0652e32d20100&ac_meta=GhA0ZWUwNjUyZTMyZDIwMTAwIAAoATICdmk6DMSQ4bqvYyBM4bqvY0AASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Bà Rịa - Vũng Tàu': 'https://www.booking.com/searchresults.vi.html?ss=B%C3%A0+R%E1%BB%8Ba+-+V%C5%A9ng+T%C3%A0u%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKysMaoBsACAdICJDMzZjgzMmI0LWQ2OWItNGQ3NC05YjVlLTE3YmUxMjVkYjlkZNgCBeACAQ&sid=50edefab3f9ea3225b144fc3b87a3154&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6233&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=68056559f39a02be&ac_meta=GhA2ODA1NjU1OWYzOWEwMmJlIAAoATICdmk6DELDoCBS4buLYSAtIEAASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Phú Yên': 'https://www.booking.com/searchresults.vi.html?ss=Ph%C3%BA+Y%C3%AAn%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALZsMaoBsACAdICJDgyM2IzMmY4LTBhNzMtNGYwYi05NGVjLTE0ZGU0N2RkNmQ2M9gCBeACAQ&sid=fcd380199bfe92ccd46a326a6360d068&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6268&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=9fa4656c552203cf&ac_meta=GhA5ZmE0NjU2YzU1MjIwM2NmIAAoATICdmk6CVBow7ogWcOqbkAASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Bình Định': 'https://www.booking.com/searchresults.vi.html?ss=B%C3%ACnh+%C4%90%E1%BB%8Bnh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKGscaoBsACAdICJGE2ODFiMDViLWNiZDItNDMxMC1hMGEwLTI2ZWQ1ZDA5MzEzZNgCBeACAQ&sid=7865e80476f9bb5f4ba3c2ea00ce7452&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6923&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=551f6583546500d8&ac_meta=GhA1NTFmNjU4MzU0NjUwMGQ4IAAoATICdmk6DULDrG5oIMSQ4buLbmhAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Đồng Tháp': 'https://www.booking.com/searchresults.vi.html?ss=%C4%90%E1%BB%93ng+Th%C3%A1p%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKwscaoBsACAdICJGJkN2FmOWFiLWI2ZTgtNGVhZC05NmJkLWIwZmM5YTdmOTkwOdgCBeACAQ&sid=4255dce1f5a270f29ec9a577a5cb49ad&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6890&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=e651659869b100b4&ac_meta=GhBlNjUxNjU5ODY5YjEwMGI0IAAoATICdmk6DcSQ4buTbmcgVGjDoXBAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Cà Mau': 'https://www.booking.com/searchresults.vi.html?ss=C%C3%A0+Mau%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALRs8aoBsACAdICJGM4MDA5ODI2LWMwYTgtNDg1NC1iZDhmLTFhMTAxYTlkYzYzNtgCBeACAQ&sid=bd80f726d8685b5b06d34022f2ecec74&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6895&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=795266281f340245&ac_meta=GhA3OTUyNjYyODFmMzQwMjQ1IAAoATICdmk6B0PDoCBNYXVAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Quảng Ngãi': 'https://www.booking.com/searchresults.vi.html?ss=Qu%E1%BA%A3ng+Ng%C3%A3i%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKSk8qoBsACAdICJGY3ZjFmZGUyLWYyMmQtNGUyNi05ZTJkLTcwOTZlMGUyYmJkMNgCBeACAQ&sid=b241ab415eb56bb80f6e41ed3482e600&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6924&dest_type=region&ac_position=1&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=6a7f3549848000f8&ac_meta=GhA2YTdmMzU0OTg0ODAwMGY4IAEoATICdmk6DVF14bqjbmcgTmfDo2lAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Ninh Bình': 'https://www.booking.com/searchresults.vi.html?ss=Ninh+B%C3%ACnh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuALntMaoBsACAdICJDgwZTlmNDFkLTMxNmEtNGJiMC1hZGM3LTgwN2Y1MzM4MGQyNtgCBeACAQ&sid=8fc07233268296c280aa4c70ee9566b1&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6267&dest_type=region&ac_position=2&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=46456673a6bd01ff&ac_meta=GhA0NjQ1NjY3M2E2YmQwMWZmIAIoATICdmk6Ck5pbmggQsOsbmhAAEoAUAA%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0', 'Tây Ninh': 'https://www.booking.com/searchresults.vi.html?ss=T%C3%A2y+Ninh%2C+Vi%E1%BB%87t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAKVtcaoBsACAdICJDgyYTIzYzgxLWU5NmQtNDVhNy1iYTljLWI2NjI1MjQ1NGUyMNgCBeACAQ&sid=5a0b15c965d57334ad387f8f4a9eabdb&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=6883&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=vi&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=7b3d668a3b5b0212&ac_meta=GhA3YjNkNjY4YTNiNWIwMjEyIAAoATICdmk6CVTDonkgTmluaEAASgBQAA%3D%3D&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0'}
+[2023-09-29T12:24:52.181+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 19, in extract_data
+    data = get_today_dataframe(booking_links[0])
+KeyError: 0
+[2023-09-29T12:24:52.186+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T122452, end_date=20230929T122452
+[2023-09-29T12:24:52.193+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 19 for task crawl_data (0; 185)
+[2023-09-29T12:24:52.238+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:24:52.249+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:26:19.085+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:26:19.091+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:26:19.095+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:26:19.096+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:26:19.101+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:26:19.105+0000] {standard_task_runner.py:57} INFO - Started process 191 to run task
+[2023-09-29T12:26:19.107+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp9hdayv7i']
+[2023-09-29T12:26:19.108+0000] {standard_task_runner.py:85} INFO - Job 21: Subtask crawl_data
+[2023-09-29T12:26:19.114+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:26:19.133+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:26:19.138+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:26:19.187+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:26:19.190+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 18, in extract_data
+    print(booking_links[0])
+KeyError: 0
+[2023-09-29T12:26:19.195+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T122619, end_date=20230929T122619
+[2023-09-29T12:26:19.205+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 21 for task crawl_data (0; 191)
+[2023-09-29T12:26:19.239+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:26:19.253+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:35:43.111+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:35:43.116+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:35:43.120+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:35:43.120+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:35:43.125+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:35:43.129+0000] {standard_task_runner.py:57} INFO - Started process 197 to run task
+[2023-09-29T12:35:43.131+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpewwz93b7']
+[2023-09-29T12:35:43.132+0000] {standard_task_runner.py:85} INFO - Job 23: Subtask crawl_data
+[2023-09-29T12:35:43.138+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:35:43.155+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:35:43.162+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:35:43.200+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:35:43.201+0000] {logging_mixin.py:151} INFO - https://www.booking.com/searchresults.vi.html?ss=TP.+H%C3%B4%CC%80+Chi%CC%81+Minh%2C+Vi%C3%AA%CC%A3t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAL1lMaoBsACAdICJGM1MWM1ODQyLWYzMmMtNGExMi1iMWFmLWM4YzliMDE0MzJlMNgCBeACAQ&sid=a3cf4761bc87283185953cebac7c42a2&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3730078&dest_type=city&checkin={checkin}&checkout={checkout}&group_adults={adult}&no_rooms={room}&group_children={children}&sb_travel_purpose=leisure&selected_currency={currency}&offset=0
+[2023-09-29T12:35:43.202+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 19, in extract_data
+    data = get_today_dataframe(booking_links['Hồ Chí Minh'])
+  File "/opt/airflow/dags/help_function/crawl_func.py", line 139, in get_today_dataframe
+    link = booking_links[key] # Lấy url
+TypeError: string indices must be integers
+[2023-09-29T12:35:43.206+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T123543, end_date=20230929T123543
+[2023-09-29T12:35:43.211+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 23 for task crawl_data (string indices must be integers; 197)
+[2023-09-29T12:35:43.224+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:35:43.235+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:36:53.490+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:36:53.495+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:36:53.498+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:36:53.498+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:36:53.503+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:36:53.507+0000] {standard_task_runner.py:57} INFO - Started process 203 to run task
+[2023-09-29T12:36:53.510+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp1g2ic_nd']
+[2023-09-29T12:36:53.510+0000] {standard_task_runner.py:85} INFO - Job 25: Subtask crawl_data
+[2023-09-29T12:36:53.516+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:36:53.531+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:36:53.535+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:36:53.562+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:38:35.041+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 20, in extract_data
+    conn_tmp = MySqlHook(mysql_conn_id = 'RawTemp').get_sqlachemy_engine()
+AttributeError: 'MySqlHook' object has no attribute 'get_sqlachemy_engine'
+[2023-09-29T12:38:35.047+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T123653, end_date=20230929T123835
+[2023-09-29T12:38:35.052+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 25 for task crawl_data ('MySqlHook' object has no attribute 'get_sqlachemy_engine'; 203)
+[2023-09-29T12:38:35.073+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:38:35.084+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T12:47:54.769+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:47:54.773+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:47:54.776+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T12:47:54.776+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T12:47:54.781+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T12:47:54.785+0000] {standard_task_runner.py:57} INFO - Started process 209 to run task
+[2023-09-29T12:47:54.787+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp_0e8h_88']
+[2023-09-29T12:47:54.788+0000] {standard_task_runner.py:85} INFO - Job 27: Subtask crawl_data
+[2023-09-29T12:47:54.794+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T12:47:54.811+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T12:47:54.817+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T12:47:54.849+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T12:49:31.988+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 20, in extract_data
+    conn_tmp = MySqlHook(mysql_conn_id = 'RawTemp').get_sqlachemy_engine()
+AttributeError: 'MySqlHook' object has no attribute 'get_sqlachemy_engine'
+[2023-09-29T12:49:31.995+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T124754, end_date=20230929T124931
+[2023-09-29T12:49:32.007+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 27 for task crawl_data ('MySqlHook' object has no attribute 'get_sqlachemy_engine'; 209)
+[2023-09-29T12:49:32.050+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T12:49:32.068+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T13:55:48.105+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T13:55:48.110+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T13:55:48.114+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T13:55:48.114+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T13:55:48.118+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T13:55:48.122+0000] {standard_task_runner.py:57} INFO - Started process 215 to run task
+[2023-09-29T13:55:48.125+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpcuuh9_nz']
+[2023-09-29T13:55:48.125+0000] {standard_task_runner.py:85} INFO - Job 29: Subtask crawl_data
+[2023-09-29T13:55:48.132+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T13:55:48.149+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T13:55:48.154+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T13:55:48.182+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T13:57:23.624+0000] {base.py:73} INFO - Using connection ID 'RawTemp' for task execution.
+[2023-09-29T13:57:23.642+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 20, in extract_data
+    conn_tmp = MySqlHook(mysql_conn_id = 'RawTemp').get_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/mysql/hooks/mysql.py", line 188, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to MySQL server on '127.0.0.1' (115)")
+[2023-09-29T13:57:23.646+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T135548, end_date=20230929T135723
+[2023-09-29T13:57:23.652+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 29 for task crawl_data ((2002, "Can't connect to MySQL server on '127.0.0.1' (115)"); 215)
+[2023-09-29T13:57:23.673+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T13:57:23.688+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T14:40:19.220+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T14:40:19.229+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T14:40:19.235+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T14:40:19.235+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T14:40:19.241+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T14:40:19.245+0000] {standard_task_runner.py:57} INFO - Started process 236 to run task
+[2023-09-29T14:40:19.248+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpcm1xdpfp']
+[2023-09-29T14:40:19.248+0000] {standard_task_runner.py:85} INFO - Job 36: Subtask crawl_data
+[2023-09-29T14:40:19.256+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T14:40:19.279+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T14:40:19.285+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T14:40:19.318+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T14:41:57.888+0000] {base.py:73} INFO - Using connection ID 'RawTemp' for task execution.
+[2023-09-29T14:41:57.902+0000] {warnings.py:109} WARNING - /opt/***/dags/help_function/ETL_Data.py:22: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  data.to_sql(self.name_raw_table,conn_tmp,if_exists = 'replace',index=False)
+
+[2023-09-29T14:41:57.903+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 200, in _mogrify
+    query = query % args
+TypeError: not all arguments converted during bytes formatting
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2202, in execute
+    cur.execute(sql, *args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 176, in execute
+    mogrified_query = self._mogrify(query, args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 202, in _mogrify
+    raise ProgrammingError(str(m))
+MySQLdb.ProgrammingError: not all arguments converted during bytes formatting
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 22, in extract_data
+    data.to_sql(self.name_raw_table,conn_tmp,if_exists = 'replace',index=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 769, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2378, in to_sql
+    table.create()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 903, in create
+    if self.exists():
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 889, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2385, in has_table
+    return len(self.execute(query, [name]).fetchall()) > 0
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2214, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': not all arguments converted during bytes formatting
+[2023-09-29T14:41:57.910+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T144019, end_date=20230929T144157
+[2023-09-29T14:41:57.915+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 36 for task crawl_data (Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': not all arguments converted during bytes formatting; 236)
+[2023-09-29T14:41:57.945+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T14:41:57.968+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-29T15:04:54.808+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T15:04:54.813+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T15:04:54.818+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-09-29T15:04:54.818+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-29T15:04:54.824+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-29 00:00:00+00:00
+[2023-09-29T15:04:54.829+0000] {standard_task_runner.py:57} INFO - Started process 242 to run task
+[2023-09-29T15:04:54.833+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp671vi7ce']
+[2023-09-29T15:04:54.834+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask crawl_data
+[2023-09-29T15:04:54.846+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-29T15:04:54.870+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-09-29T00:00:00+00:00 [running]> on host 2651bdac0f0e
+[2023-09-29T15:04:54.877+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-29T15:04:54.911+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-09-29T15:06:33.675+0000] {base.py:73} INFO - Using connection ID 'RawTemp' for task execution.
+[2023-09-29T15:06:33.682+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 22, in extract_data
+    data.to_sql(self.name_raw_table,conn_tmp,if_exists = 'replace',index=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 768, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 832, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1539, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+TypeError: '__extra__' is an invalid keyword argument for connect()
+[2023-09-29T15:06:33.693+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20230929T000000, start_date=20230929T150454, end_date=20230929T150633
+[2023-09-29T15:06:33.699+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 38 for task crawl_data ('__extra__' is an invalid keyword argument for connect(); 242)
+[2023-09-29T15:06:33.732+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-29T15:06:33.751+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

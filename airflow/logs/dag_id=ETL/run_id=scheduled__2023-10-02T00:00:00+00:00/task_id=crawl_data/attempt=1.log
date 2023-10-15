@@ -1,0 +1,279 @@
+[2023-10-02T10:22:48.089+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T10:22:48.094+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T10:22:48.100+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T10:22:48.100+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T10:22:48.108+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T10:22:48.112+0000] {standard_task_runner.py:57} INFO - Started process 155 to run task
+[2023-10-02T10:22:48.115+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpu019syi0']
+[2023-10-02T10:22:48.115+0000] {standard_task_runner.py:85} INFO - Job 58: Subtask crawl_data
+[2023-10-02T10:22:48.126+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T10:22:48.147+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host e8049923f551
+[2023-10-02T10:22:48.154+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T10:22:48.203+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T10:24:37.782+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 22, in extract_data
+    data.to_excel(name_file_excel)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2252, in to_excel
+    formatter.write(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/formats/excel.py", line 934, in write
+    writer = ExcelWriter(  # type: ignore[abstract]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/excel/_openpyxl.py", line 56, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'
+[2023-10-02T10:24:37.795+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T102248, end_date=20231002T102437
+[2023-10-02T10:24:37.803+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 58 for task crawl_data (No module named 'openpyxl'; 155)
+[2023-10-02T10:24:37.822+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-10-02T10:24:37.841+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T11:20:16.223+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:20:16.228+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:20:16.233+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:20:16.234+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T11:20:16.241+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T11:20:16.245+0000] {standard_task_runner.py:57} INFO - Started process 55 to run task
+[2023-10-02T11:20:16.247+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpw2c2s02j']
+[2023-10-02T11:20:16.247+0000] {standard_task_runner.py:85} INFO - Job 61: Subtask crawl_data
+[2023-10-02T11:20:16.257+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T11:20:16.280+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T11:20:16.287+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:20:16.335+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T11:22:08.851+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T11:22:08.858+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T112016, end_date=20231002T112208
+[2023-10-02T11:22:08.916+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T11:22:08.939+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T11:24:52.063+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:24:52.068+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:24:52.073+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:24:52.073+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T11:24:52.081+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T11:24:52.085+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2023-10-02T11:24:52.087+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpmpjq0e5d']
+[2023-10-02T11:24:52.088+0000] {standard_task_runner.py:85} INFO - Job 65: Subtask crawl_data
+[2023-10-02T11:24:52.097+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T11:24:52.117+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T11:24:52.124+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:24:52.175+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T11:26:43.314+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T11:26:43.319+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T112452, end_date=20231002T112643
+[2023-10-02T11:26:43.348+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T11:26:43.370+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T11:40:57.017+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:40:57.023+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:40:57.027+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T11:40:57.027+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T11:40:57.034+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T11:40:57.037+0000] {standard_task_runner.py:57} INFO - Started process 90 to run task
+[2023-10-02T11:40:57.040+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp8affsebk']
+[2023-10-02T11:40:57.041+0000] {standard_task_runner.py:85} INFO - Job 69: Subtask crawl_data
+[2023-10-02T11:40:57.053+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T11:40:57.077+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T11:40:57.088+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T11:40:57.135+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T11:42:50.439+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T11:42:50.444+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T114057, end_date=20231002T114250
+[2023-10-02T11:42:50.500+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T11:42:50.526+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T12:05:18.393+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T12:05:18.399+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T12:05:18.404+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T12:05:18.404+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T12:05:18.411+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T12:05:18.415+0000] {standard_task_runner.py:57} INFO - Started process 102 to run task
+[2023-10-02T12:05:18.417+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp01vbs72g']
+[2023-10-02T12:05:18.417+0000] {standard_task_runner.py:85} INFO - Job 73: Subtask crawl_data
+[2023-10-02T12:05:18.427+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T12:05:18.449+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T12:05:18.457+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T12:05:18.505+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T12:07:16.919+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T12:07:16.923+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T120518, end_date=20231002T120716
+[2023-10-02T12:07:16.985+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T12:07:17.015+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T14:49:11.578+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T14:49:11.593+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T14:49:11.600+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T14:49:11.601+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T14:49:11.623+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T14:49:11.628+0000] {standard_task_runner.py:57} INFO - Started process 118 to run task
+[2023-10-02T14:49:11.630+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpv1kit_25']
+[2023-10-02T14:49:11.632+0000] {standard_task_runner.py:85} INFO - Job 77: Subtask crawl_data
+[2023-10-02T14:49:11.649+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T14:49:11.681+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T14:49:11.688+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T14:49:11.738+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T14:50:52.903+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T14:50:52.908+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T144911, end_date=20231002T145052
+[2023-10-02T14:50:52.954+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T14:50:52.975+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:02:33.626+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:02:33.631+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:02:33.636+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:02:33.636+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:02:33.643+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:02:33.646+0000] {standard_task_runner.py:57} INFO - Started process 130 to run task
+[2023-10-02T15:02:33.649+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmps3fd3_yz']
+[2023-10-02T15:02:33.649+0000] {standard_task_runner.py:85} INFO - Job 81: Subtask crawl_data
+[2023-10-02T15:02:33.658+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:02:33.678+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:02:33.684+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:02:33.729+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:04:19.447+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:04:19.452+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T150233, end_date=20231002T150419
+[2023-10-02T15:04:19.482+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:04:19.509+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:11:42.507+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:11:42.514+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:11:42.519+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:11:42.519+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:11:42.526+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:11:42.533+0000] {standard_task_runner.py:57} INFO - Started process 142 to run task
+[2023-10-02T15:11:42.536+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpzoo39uae']
+[2023-10-02T15:11:42.537+0000] {standard_task_runner.py:85} INFO - Job 85: Subtask crawl_data
+[2023-10-02T15:11:42.549+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:11:42.574+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:11:42.583+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:11:42.630+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:13:23.221+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:13:23.226+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T151142, end_date=20231002T151323
+[2023-10-02T15:13:23.261+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:13:23.293+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:16:23.446+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:16:23.450+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:16:23.455+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:16:23.455+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:16:23.462+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:16:23.466+0000] {standard_task_runner.py:57} INFO - Started process 154 to run task
+[2023-10-02T15:16:23.469+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpw400j_ja']
+[2023-10-02T15:16:23.470+0000] {standard_task_runner.py:85} INFO - Job 89: Subtask crawl_data
+[2023-10-02T15:16:23.478+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:16:23.497+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:16:23.508+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:16:23.561+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:18:03.663+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:18:03.668+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T151623, end_date=20231002T151803
+[2023-10-02T15:18:03.720+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:18:03.743+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:21:24.570+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:21:24.579+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:21:24.585+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:21:24.585+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:21:24.593+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:21:24.598+0000] {standard_task_runner.py:57} INFO - Started process 166 to run task
+[2023-10-02T15:21:24.603+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpoix911m5']
+[2023-10-02T15:21:24.603+0000] {standard_task_runner.py:85} INFO - Job 93: Subtask crawl_data
+[2023-10-02T15:21:24.614+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:21:24.639+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:21:24.647+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:21:24.712+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:23:04.179+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:23:04.183+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T152124, end_date=20231002T152304
+[2023-10-02T15:23:04.230+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:23:04.259+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:34:21.637+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:34:21.642+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:34:21.647+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:34:21.647+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:34:21.655+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:34:21.659+0000] {standard_task_runner.py:57} INFO - Started process 178 to run task
+[2023-10-02T15:34:21.661+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpz082s9vy']
+[2023-10-02T15:34:21.661+0000] {standard_task_runner.py:85} INFO - Job 97: Subtask crawl_data
+[2023-10-02T15:34:21.670+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:34:21.690+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:34:21.698+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:34:21.750+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:36:03.848+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:36:03.853+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T153421, end_date=20231002T153603
+[2023-10-02T15:36:03.873+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:36:03.895+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-02T15:47:25.491+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:47:25.497+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:47:25.501+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-02T15:47:25.501+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-02T15:47:25.509+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-02 00:00:00+00:00
+[2023-10-02T15:47:25.512+0000] {standard_task_runner.py:57} INFO - Started process 190 to run task
+[2023-10-02T15:47:25.514+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpts839t4r']
+[2023-10-02T15:47:25.515+0000] {standard_task_runner.py:85} INFO - Job 101: Subtask crawl_data
+[2023-10-02T15:47:25.529+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-02T15:47:25.548+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-02T00:00:00+00:00 [running]> on host 16e40c1fcc3f
+[2023-10-02T15:47:25.555+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-02T15:47:25.614+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-02T15:49:05.057+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T15:49:05.062+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crawl_data, execution_date=20231002T000000, start_date=20231002T154725, end_date=20231002T154905
+[2023-10-02T15:49:05.122+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T15:49:05.144+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,83 @@
+[2023-10-14T01:08:31.679+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-14T01:08:31.789+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-14T01:00:00+00:00 [queued]>
+[2023-10-14T01:08:31.794+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.crawl_data scheduled__2023-10-14T01:00:00+00:00 [queued]>
+[2023-10-14T01:08:31.794+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-10-14T01:08:31.801+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-10-14 01:00:00+00:00
+[2023-10-14T01:08:31.804+0000] {standard_task_runner.py:57} INFO - Started process 379 to run task
+[2023-10-14T01:08:31.806+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'crawl_data', 'scheduled__2023-10-14T01:00:00+00:00', '--job-id', '737', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmptwxjx_at']
+[2023-10-14T01:08:31.808+0000] {standard_task_runner.py:85} INFO - Job 737: Subtask crawl_data
+[2023-10-14T01:08:31.816+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-10-14T01:08:31.841+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.crawl_data scheduled__2023-10-14T01:00:00+00:00 [running]> on host cba2d0d235e2
+[2023-10-14T01:08:31.847+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-10-14T01:08:31.895+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-14T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-14T01:00:00+00:00'
+[2023-10-14T01:08:31.901+0000] {base.py:73} INFO - Using connection ID 'Booking' for task execution.
+[2023-10-14T01:08:32.163+0000] {logging_mixin.py:151} INFO - link https://www.booking.com/searchresults.vi.html?ss=TP.+H%C3%B4%CC%80+Chi%CC%81+Minh%2C+Vi%C3%AA%CC%A3t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAL1lMaoBsACAdICJGM1MWM1ODQyLWYzMmMtNGExMi1iMWFmLWM4YzliMDE0MzJlMNgCBeACAQ&sid=a3cf4761bc87283185953cebac7c42a2&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3730078&dest_type=city&checkin=2024-01-15&checkout=2024-01-16&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure&selected_currency=VND&offset={}
+[2023-10-14T01:08:34.110+0000] {logging_mixin.py:151} INFO - link https://www.booking.com/searchresults.vi.html?ss=TP.+H%C3%B4%CC%80+Chi%CC%81+Minh%2C+Vi%C3%AA%CC%A3t+Nam&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaPQBiAEBmAEquAEXyAEM2AEB6AEBiAIBqAIDuAL1lMaoBsACAdICJGM1MWM1ODQyLWYzMmMtNGExMi1iMWFmLWM4YzliMDE0MzJlMNgCBeACAQ&sid=a3cf4761bc87283185953cebac7c42a2&aid=304142&lang=vi&sb=1&src_elem=sb&src=index&dest_id=-3730078&dest_type=city&checkin=2024-01-15&checkout=2024-01-16&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure&selected_currency=VND&offset={}
+[2023-10-14T08:03:38.454+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 761, in _update_chunk_length
+    self.chunk_left = int(line, 16)
+ValueError: invalid literal for int() with base 16: b''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 828, in read_chunked
+    self._update_chunk_length()
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 765, in _update_chunk_length
+    raise InvalidChunkLength(self, line)
+urllib3.exceptions.InvalidChunkLength: InvalidChunkLength(got length b'', 0 bytes read)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 624, in stream
+    for line in self.read_chunked(amt, decode_content=decode_content):
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 857, in read_chunked
+    self._original_response.close()
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 461, in _error_catcher
+    raise ProtocolError("Connection broken: %r" % e, e)
+urllib3.exceptions.ProtocolError: ("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 23, in extract_data
+    data = get_today_dataframe(checkin, checkout, weekday,booking_links)
+  File "/opt/airflow/dags/help_function/crawl_func.py", line 177, in get_today_dataframe
+    df = crawl_booking_data(link, checkin, checkout, adult, room, children, currency)
+  File "/opt/airflow/dags/help_function/crawl_func.py", line 103, in crawl_booking_data
+    response = requests.get(url, headers=headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 747, in send
+    r.content
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read))
+[2023-10-14T08:03:38.484+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=crawl_data, execution_date=20231014T010000, start_date=20231014T010831, end_date=20231014T080338
+[2023-10-14T08:03:38.504+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 737 for task crawl_data (("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read)); 379)
+[2023-10-14T08:03:38.539+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-10-14T08:03:38.571+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

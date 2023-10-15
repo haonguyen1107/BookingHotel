@@ -1,0 +1,136 @@
+[2023-09-30T15:44:20.979+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-30T15:44:20.985+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-09-30T15:44:20.990+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-09-30T15:44:20.991+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-30T15:44:20.998+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_data> on 2023-09-30 00:00:00+00:00
+[2023-09-30T15:44:21.002+0000] {standard_task_runner.py:57} INFO - Started process 119 to run task
+[2023-09-30T15:44:21.004+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'load_data', 'scheduled__2023-09-30T00:00:00+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpudd39ogd']
+[2023-09-30T15:44:21.005+0000] {standard_task_runner.py:85} INFO - Job 52: Subtask load_data
+[2023-09-30T15:44:21.014+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-30T15:44:21.034+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [running]> on host e8049923f551
+[2023-09-30T15:44:21.040+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-30T15:44:21.073+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-30T00:00:00+00:00'
+[2023-09-30T15:44:21.074+0000] {logging_mixin.py:151} INFO - save data .......
+[2023-09-30T15:44:21.080+0000] {base.py:73} INFO - Using connection ID 'RawTemp' for task execution.
+[2023-09-30T15:44:21.083+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 37, in load
+    data = pd.read_sql(self.name_raw_table,conn_tmp)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 633, in read_sql
+    with pandasSQL_builder(con) as pandas_sql:
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 832, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1539, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+TypeError: '__extra__' is an invalid keyword argument for connect()
+[2023-09-30T15:44:21.090+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=load_data, execution_date=20230930T000000, start_date=20230930T154420, end_date=20230930T154421
+[2023-09-30T15:44:21.097+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 52 for task load_data ('__extra__' is an invalid keyword argument for connect(); 119)
+[2023-09-30T15:44:21.141+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-30T15:44:21.151+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-30T15:48:41.129+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-30T15:48:41.134+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-09-30T15:48:41.139+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-09-30T15:48:41.139+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-30T15:48:41.146+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_data> on 2023-09-30 00:00:00+00:00
+[2023-09-30T15:48:41.149+0000] {standard_task_runner.py:57} INFO - Started process 131 to run task
+[2023-09-30T15:48:41.151+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'ETL', 'load_data', 'scheduled__2023-09-30T00:00:00+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpr0lkyjb1']
+[2023-09-30T15:48:41.152+0000] {standard_task_runner.py:85} INFO - Job 56: Subtask load_data
+[2023-09-30T15:48:41.161+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-30T15:48:41.180+0000] {task_command.py:415} INFO - Running <TaskInstance: ETL.load_data scheduled__2023-09-30T00:00:00+00:00 [running]> on host e8049923f551
+[2023-09-30T15:48:41.187+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/utils/sqlalchemy.py:124: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  return not conf.get("database", "sql_alchemy_conn").startswith("mssql")
+
+[2023-09-30T15:48:41.219+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-30T00:00:00+00:00'
+[2023-09-30T15:48:41.220+0000] {logging_mixin.py:151} INFO - save data .......
+[2023-09-30T15:48:41.233+0000] {base.py:73} INFO - Using connection ID 'RawTemp' for task execution.
+[2023-09-30T15:48:41.238+0000] {warnings.py:109} WARNING - /opt/airflow/dags/help_function/ETL_Data.py:39: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  data = pd.read_sql(f'Select * From {self.name_raw_table}',conn)
+
+[2023-09-30T15:48:41.242+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2202, in execute
+    cur.execute(sql, *args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'temp.raw_data' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/help_function/ETL_Data.py", line 39, in load
+    data = pd.read_sql(f'Select * From {self.name_raw_table}',conn)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 635, in read_sql
+    return pandas_sql.read_query(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2266, in read_query
+    cursor = self.execute(sql, params)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 2214, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'Select * From RAW_DATA': (1146, "Table 'temp.raw_data' doesn't exist")
+[2023-09-30T15:48:41.247+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL, task_id=load_data, execution_date=20230930T000000, start_date=20230930T154841, end_date=20230930T154841
+[2023-09-30T15:48:41.255+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 56 for task load_data (Execution failed on sql 'Select * From RAW_DATA': (1146, "Table 'temp.raw_data' doesn't exist"); 131)
+[2023-09-30T15:48:41.284+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-30T15:48:41.294+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

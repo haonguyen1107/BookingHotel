@@ -1,0 +1,97 @@
+[2023-09-25T03:43:27.441+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawling_data.crawl_data manual__2023-09-25T03:43:24.962738+00:00 [queued]>
+[2023-09-25T03:43:27.445+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawling_data.crawl_data manual__2023-09-25T03:43:24.962738+00:00 [queued]>
+[2023-09-25T03:43:27.445+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-25T03:43:27.451+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): crawl_data> on 2023-09-25 03:43:24.962738+00:00
+[2023-09-25T03:43:27.454+0000] {standard_task_runner.py:57} INFO - Started process 97 to run task
+[2023-09-25T03:43:27.457+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawling_data', 'crawl_data', 'manual__2023-09-25T03:43:24.962738+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/crawl_data.py', '--cfg-path', '/tmp/tmp1i408khq']
+[2023-09-25T03:43:27.457+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask crawl_data
+[2023-09-25T03:43:27.464+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-09-25T03:43:27.479+0000] {task_command.py:415} INFO - Running <TaskInstance: crawling_data.crawl_data manual__2023-09-25T03:43:24.962738+00:00 [running]> on host 2651bdac0f0e
+[2023-09-25T03:43:27.513+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawling_data' AIRFLOW_CTX_TASK_ID='crawl_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-25T03:43:24.962738+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-25T03:43:24.962738+00:00'
+[2023-09-25T03:44:48.278+0000] {logging_mixin.py:151} INFO - vtttt                                     Hotel Name  ...          Price
+0                           CAROLINE SEA HOTEL  ...  Not mentioned
+1                          BOBO Boutique Hotel  ...  Not mentioned
+2                      The Song Yuki Apartment  ...  Not mentioned
+3    CONDOTEL 5 SAO THE SÓNG VŨNG TÀU Mr VƯƠNG  ...  Not mentioned
+4               Queen Garden Hotel & Apartment  ...  Not mentioned
+..                                         ...  ...            ...
+995                            Căn hộ the sóng  ...  Not mentioned
+996          Villa Hồ Bơi Vali CỘT CỜ Vũng Tàu  ...  Not mentioned
+997     Villa Hồ Bơi Vali BIDA KARAOKE BÃI SAU  ...  Not mentioned
+998         Villa Hồ Bơi Vali TRUNG TÂM CỘT CỜ  ...  Not mentioned
+999                    DUMIN Homestay Vũng Tàu  ...  Not mentioned
+
+[1000 rows x 8 columns]
+[2023-09-25T03:44:48.280+0000] {python.py:194} INFO - Done. Returned value was:                                     Hotel Name  ...          Price
+0                           CAROLINE SEA HOTEL  ...  Not mentioned
+1                          BOBO Boutique Hotel  ...  Not mentioned
+2                      The Song Yuki Apartment  ...  Not mentioned
+3    CONDOTEL 5 SAO THE SÓNG VŨNG TÀU Mr VƯƠNG  ...  Not mentioned
+4               Queen Garden Hotel & Apartment  ...  Not mentioned
+..                                         ...  ...            ...
+995                            Căn hộ the sóng  ...  Not mentioned
+996          Villa Hồ Bơi Vali CỘT CỜ Vũng Tàu  ...  Not mentioned
+997     Villa Hồ Bơi Vali BIDA KARAOKE BÃI SAU  ...  Not mentioned
+998         Villa Hồ Bơi Vali TRUNG TÂM CỘT CỜ  ...  Not mentioned
+999                    DUMIN Homestay Vũng Tàu  ...  Not mentioned
+
+[1000 rows x 8 columns]
+[2023-09-25T03:44:48.300+0000] {xcom.py:661} ERROR - Object of type DataFrame is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2023-09-25T03:44:48.301+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/serialization/serde.py", line 143, in serialize
+    data, classname, version, is_serialized = _serializers[qn].serialize(o)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+  File "pyarrow/table.pxi", line 3557, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 624, in dataframe_to_arrays
+    arrays[i] = maybe_fut.result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 598, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 592, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow/array.pxi", line 316, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 83, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 123, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column Review with type object')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 244, in set
+    value = cls.serialize_value(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 659, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 104, in encode
+    return super().encode(o)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 93, in default
+    return super().default(o)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+[2023-09-25T03:44:48.306+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=crawling_data, task_id=crawl_data, execution_date=20230925T034324, start_date=20230925T034327, end_date=20230925T034448
+[2023-09-25T03:44:48.311+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 7 for task crawl_data (Object of type DataFrame is not JSON serializable; 97)
+[2023-09-25T03:44:48.367+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-25T03:44:48.377+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
